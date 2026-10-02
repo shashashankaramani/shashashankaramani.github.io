@@ -6,6 +6,10 @@
   <title>Experience | Shasha Shankaramani</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -19,6 +23,10 @@
       align-items: center;
       padding: 24px 8%;
       border-bottom: 1px solid #e6e6e6;
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 100;
     }
 
     .nav-name {
@@ -38,70 +46,176 @@
     }
 
     .page-header {
-      padding: 80px 8% 40px;
+      padding: 90px 8% 70px;
+      max-width: 1100px;
     }
 
     .page-header h1 {
-      font-size: 52px;
-      margin-bottom: 12px;
+      font-size: 56px;
+      margin: 0 0 20px;
+      letter-spacing: -1px;
     }
 
     .page-header p {
-      font-size: 18px;
+      font-size: 19px;
+      line-height: 1.7;
       color: #555;
-      max-width: 700px;
-      line-height: 1.6;
+      max-width: 760px;
     }
 
-    .experience-section {
-      padding: 20px 8% 80px;
-      max-width: 1000px;
+    .experience {
+      padding: 80px 8%;
+      border-top: 1px solid #eeeeee;
     }
 
-    .experience-item {
-      padding: 32px 0;
-      border-top: 1px solid #e6e6e6;
+    .experience-inner {
+      max-width: 1150px;
+      margin: 0 auto;
     }
 
-    .experience-item h2 {
-      margin-bottom: 8px;
-      font-size: 26px;
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
     }
 
-    .role {
-      font-size: 17px;
-      font-weight: 600;
-      margin-bottom: 6px;
+    .experience-title h2 {
+      font-size: 38px;
+      margin: 0 0 10px;
     }
 
-    .date {
-      font-size: 15px;
+    .experience-title h3 {
+      font-size: 20px;
+      font-weight: 500;
+      color: #555;
+      margin: 0;
+    }
+
+    .experience-date {
       color: #777;
-      margin-bottom: 16px;
+      font-size: 16px;
+      padding-top: 8px;
     }
 
-    .experience-item p {
+    .overview {
+      max-width: 850px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 50px;
+    }
+
+    .project-block {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      margin: 70px 0;
+    }
+
+    .project-block.reverse {
+      grid-template-columns: 1fr 1.1fr;
+    }
+
+    .project-text h4 {
+      font-size: 27px;
+      margin: 0 0 16px;
+    }
+
+    .project-text p {
       font-size: 17px;
       line-height: 1.7;
       color: #444;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .tag {
+      border: 1px solid #d9d9d9;
+      border-radius: 20px;
+      padding: 8px 14px;
+      font-size: 14px;
+      color: #444;
+      background: #fafafa;
+    }
+
+    .media-placeholder {
+      min-height: 330px;
+      border: 1px dashed #bcbcbc;
+      border-radius: 12px;
+      background: #f7f7f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #888;
+      padding: 30px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 50px 0;
+    }
+
+    .metric {
+      border-top: 2px solid #1a1a1a;
+      padding-top: 18px;
+    }
+
+    .metric-number {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .metric-label {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .subsection {
+      margin-top: 70px;
+      padding-top: 35px;
+      border-top: 1px solid #dddddd;
+    }
+
+    .subsection h4 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .subsection p {
       max-width: 800px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #444;
     }
 
     footer {
-      padding: 40px 8%;
+      padding: 45px 8%;
       border-top: 1px solid #eeeeee;
       color: #777;
       font-size: 14px;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 850px) {
       nav {
-        align-items: flex-start;
         flex-direction: column;
+        align-items: flex-start;
       }
 
       .nav-links {
-        margin-top: 15px;
+        margin-top: 14px;
       }
 
       .nav-links a {
@@ -109,8 +223,17 @@
         margin-right: 18px;
       }
 
+      .project-block,
+      .project-block.reverse {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
       .page-header h1 {
-        font-size: 40px;
+        font-size: 42px;
       }
     }
   </style>
@@ -133,47 +256,285 @@
 
   <section class="page-header">
     <h1>Experience</h1>
-
     <p>
-      My experience includes engineering internships, technical teams,
-      and academic organizations spanning aerospace, automotive systems,
-      mechanical design, and robotics.
+      Selected engineering, technical, and leadership experiences spanning
+      aerospace, vehicle performance, digital systems, and product development.
     </p>
   </section>
 
-  <section class="experience-section">
 
-    <div class="experience-item">
-      <h2>GE Aerospace</h2>
-      <div class="role">Engineering Intern</div>
-      <div class="date">Summer 2026</div>
-      <p>
-        Worked on transient performance and operability for the F110 and
-        Small Uncrewed Engine programs using NPSS simulation and engine test data.
+  <!-- GE EDISON -->
+  <section class="experience">
+    <div class="experience-inner">
+
+      <div class="experience-header">
+        <div class="experience-title">
+          <h2>GE Aerospace</h2>
+          <h3>Edison Engineering Intern</h3>
+        </div>
+
+        <div class="experience-date">
+          May 2026 – August 2026 · Evendale, Ohio
+        </div>
+      </div>
+
+      <p class="overview">
+        Worked on aircraft engine performance and operability, combining
+        simulation and on-site engine testing to evaluate system behavior
+        across changing operating conditions.
       </p>
-    </div>
 
-    <div class="experience-item">
-      <h2>MIT Motorsports</h2>
-      <div class="role">Team Member</div>
-      <div class="date">MIT Formula Electric</div>
-      <p>
-        Contributed to vehicle performance analysis using telemetry data,
-        including vehicle speed, slip angle, cornering forces, and driver behavior.
-      </p>
-    </div>
+      <div class="project-block">
+        <div class="media-placeholder">
+          Add NPSS plot, engine diagram, simulation screenshot, or related image here
+        </div>
 
-    <div class="experience-item">
-      <h2>GE Intern Ambassador</h2>
-      <div class="role">Intern Ambassador</div>
-      <div class="date">Summer 2026</div>
-      <p>
-        Supported intern onboarding and created introductory and promotional
-        content for internal and external communications.
-      </p>
-    </div>
+        <div class="project-text">
+          <h4>Engine Performance & Operability</h4>
 
+          <p>
+            Used NPSS to simulate F110 and Small Uncrewed Engine performance
+            across the flight envelope, evaluating fuel flow, fan speed,
+            core speed, and other engine parameters.
+          </p>
+
+          <div class="tags">
+            <span class="tag">NPSS</span>
+            <span class="tag">F110</span>
+            <span class="tag">Engine Performance</span>
+            <span class="tag">Flight Envelope</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-block reverse">
+        <div class="project-text">
+          <h4>F110-129E Transient Testing</h4>
+
+          <p>
+            Led on-site transient testing of the F110-129E with a 3D
+            thrust-vectoring nozzle, monitoring thrust, fan speed, and
+            core speed in real time and communicating performance findings
+            to engineering teams.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Transient Testing</span>
+            <span class="tag">3D Thrust Vectoring</span>
+            <span class="tag">Real-Time Monitoring</span>
+            <span class="tag">Engine Test</span>
+          </div>
+        </div>
+
+        <div class="media-placeholder">
+          Add engine test photo, approved video, or test-cell graphic here
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <div class="metric-number">2</div>
+          <div class="metric-label">
+            Engine programs evaluated
+          </div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-number">3D</div>
+          <div class="metric-label">
+            Thrust-vectoring nozzle used during testing
+          </div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-number">Real-Time</div>
+          <div class="metric-label">
+            Monitoring of engine performance during transient testing
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h4>Leadership at GE</h4>
+
+        <p>
+          Alongside my technical internship, I participated in the GE Aerospace
+          Intern Ambassador Program, supporting incoming interns and collaborating
+          with HR on introduction and promotional videos for recruiting and outreach.
+        </p>
+
+        <div class="media-placeholder">
+          Add Intern Ambassador photo or promotional video here
+        </div>
+      </div>
+
+    </div>
   </section>
+
+
+  <!-- MIT MOTORSPORTS -->
+  <section class="experience">
+    <div class="experience-inner">
+
+      <div class="experience-header">
+        <div class="experience-title">
+          <h2>MIT Motorsports</h2>
+          <h3>Performance Specialist · Vehicle Performance Subteam</h3>
+        </div>
+
+        <div class="experience-date">
+          September 2025 – Present · Cambridge, Massachusetts
+        </div>
+      </div>
+
+      <p class="overview">
+        Work on vehicle performance and driver development for MIT's Formula
+        Electric racecar, using telemetry and simulation data to improve
+        vehicle setup and driving performance.
+      </p>
+
+      <div class="project-block">
+        <div class="media-placeholder">
+          Add racecar photo, track photo, telemetry plot, or testing image here
+        </div>
+
+        <div class="project-text">
+          <h4>Vehicle Dynamics & Telemetry</h4>
+
+          <p>
+            Analyze vehicle speed, slip angle, cornering forces, and other
+            telemetry data to identify opportunities for improved vehicle
+            setup and driver performance.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Vehicle Dynamics</span>
+            <span class="tag">Telemetry</span>
+            <span class="tag">Slip Angle</span>
+            <span class="tag">Performance Analysis</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-block reverse">
+        <div class="project-text">
+          <h4>Driver Simulation & Training</h4>
+
+          <p>
+            Use driver simulation data to help train new drivers and reinforce
+            driving strategies aimed at achieving faster and more consistent laps.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Driver Simulation</span>
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Driver Training</span>
+          </div>
+        </div>
+
+        <div class="media-placeholder">
+          Add simulator image, driver data plot, or video here
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- GE DIGITAL TECHNOLOGY -->
+  <section class="experience">
+    <div class="experience-inner">
+
+      <div class="experience-header">
+        <div class="experience-title">
+          <h2>GE Aerospace</h2>
+          <h3>Digital Technology Intern</h3>
+        </div>
+
+        <div class="experience-date">
+          May 2025 – August 2025 · Evendale, Ohio
+        </div>
+      </div>
+
+      <p class="overview">
+        Supported digital systems and supply-chain technology at GE Aerospace,
+        focusing on enterprise workflows and supplier onboarding.
+      </p>
+
+      <div class="project-block">
+        <div class="media-placeholder">
+          Add approved workflow diagram, interface screenshot, or project graphic here
+        </div>
+
+        <div class="project-text">
+          <h4>Supplier Onboarding & Oracle Cloud</h4>
+
+          <p>
+            Supported Oracle Fusion Supply Chain ERP as a technical developer
+            and contributed to migrating supplier onboarding workflows to
+            Oracle Cloud.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Oracle Fusion</span>
+            <span class="tag">ERP</span>
+            <span class="tag">Cloud Migration</span>
+            <span class="tag">Workflow Design</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- MIT SANDBOX -->
+  <section class="experience">
+    <div class="experience-inner">
+
+      <div class="experience-header">
+        <div class="experience-title">
+          <h2>MIT Sandbox</h2>
+          <h3>Team Lead · Entrepreneurship Program</h3>
+        </div>
+
+        <div class="experience-date">
+          August 2025 – January 2026 · Cambridge, Massachusetts
+        </div>
+      </div>
+
+      <p class="overview">
+        Led the development of a semiconductor thin-film transfer device,
+        combining technical prototyping with customer discovery and
+        product-development decisions.
+      </p>
+
+      <div class="project-block">
+        <div class="media-placeholder">
+          Add CAD image, prototype photo, or product concept image here
+        </div>
+
+        <div class="project-text">
+          <h4>Thin-Film Transfer Device</h4>
+
+          <p>
+            Designed and prototyped a semiconductor thin-film transfer system
+            while working with industry professionals and target customers to
+            translate technical requirements into product features and design decisions.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Product Development</span>
+            <span class="tag">Prototyping</span>
+            <span class="tag">Mechanical Design</span>
+            <span class="tag">Customer Discovery</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 
   <footer>
     © 2026 Shasha Shankaramani
