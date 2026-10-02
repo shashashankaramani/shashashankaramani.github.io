@@ -1,13 +1,203 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shasha Shankaramani</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 8%;
+      border-bottom: 1px solid #e6e6e6;
+    }
+
+    .nav-name {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      margin-left: 28px;
+      text-decoration: none;
+      color: #1a1a1a;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #777;
+    }
+
+    .hero {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      padding: 40px 8%;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      margin-bottom: 16px;
+      letter-spacing: -2px;
+    }
+
+    .hero h2 {
+      font-size: 24px;
+      font-weight: 400;
+      color: #555;
+      margin-bottom: 28px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      line-height: 1.7;
+      max-width: 700px;
+      color: #444;
+    }
+
+    .section {
+      padding: 80px 8%;
+      border-top: 1px solid #eeeeee;
+    }
+
+    .section h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      border: 1px solid #dddddd;
+      border-radius: 10px;
+      padding: 28px;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .card p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    footer {
+      padding: 40px 8%;
+      border-top: 1px solid #eeeeee;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        margin-top: 15px;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+        margin-right: 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Shasha Shankaramani</h1>
-  <p>Mechanical Engineering and Robotics at MIT</p>
 
-  <p>Academic portfolio coming soon.</p>
+  <nav>
+    <div class="nav-name">Shasha Shankaramani</div>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Experience</a>
+      <a href="#">Research</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+      <a href="#">Resume</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Shasha Shankaramani</h1>
+
+      <h2>Mechanical Engineering + Robotics at MIT</h2>
+
+      <p>
+        I am interested in designing intelligent mechanical and robotic systems
+        that interact with the physical world, with particular interests in
+        robotics, assistive technology, biomedical devices, and autonomous systems.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Selected Work</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Experience</h3>
+        <p>
+          Engineering internships, technical teams, and academic organizations.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Research</h3>
+        <p>
+          Research conducted at MIT across robotics, mechanical systems,
+          and emerging technologies.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Projects</h3>
+        <p>
+          Selected projects involving mechanical design, robotics,
+          controls, and computation.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Shasha Shankaramani
+  </footer>
+
 </body>
 </html>
