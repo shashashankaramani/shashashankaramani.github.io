@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Research | Shasha Shankaramani</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+    }
+
+    /* TOP NAVIGATION */
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 8%;
+      border-bottom: 1px solid #e6e6e6;
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 100;
+    }
+
+    .nav-name {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      margin-left: 28px;
+      text-decoration: none;
+      color: #1a1a1a;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #777;
+    }
+
+
+    /* PAGE HEADER */
+
+    .page-header {
+      padding: 90px 8% 45px;
+      max-width: 1100px;
+    }
+
+    .page-header h1 {
+      font-size: 56px;
+      margin: 0 0 20px;
+      letter-spacing: -1px;
+    }
+
+    .page-header p {
+      font-size: 19px;
+      line-height: 1.7;
+      color: #555;
+      max-width: 800px;
+    }
+
+
+    /* RESEARCH JUMP NAV */
+
+    .research-nav {
+      padding: 10px 8% 70px;
+    }
+
+    .research-nav-inner {
+      max-width: 1150px;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .research-nav a {
+      text-decoration: none;
+      color: #1a1a1a;
+    }
+
+    .research-nav-card {
+      border: 1px solid #dddddd;
+      border-radius: 12px;
+      padding: 24px 20px;
+      background-color: #ffffff;
+      min-height: 150px;
+
+      transition: 0.2s;
+    }
+
+    .research-nav-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .research-nav-icon {
+      font-size: 30px;
+      margin-bottom: 14px;
+    }
+
+    .research-nav-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .research-nav-subtitle {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.4;
+    }
+
+
+    /* RESEARCH SECTIONS */
+
+    .research-section {
+      padding: 80px 8%;
+      border-top: 1px solid #eeeeee;
+      scroll-margin-top: 100px;
+    }
+
+    .research-inner {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    .research-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .research-title h2 {
+      font-size: 38px;
+      margin: 0 0 10px;
+    }
+
+    .research-title h3 {
+      font-size: 20px;
+      font-weight: 500;
+      color: #555;
+      margin: 0;
+    }
+
+    .research-date {
+      color: #777;
+      font-size: 16px;
+      padding-top: 8px;
+    }
+
+    .overview {
+      max-width: 850px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 50px;
+    }
+
+
+    /* RESEARCH CONTENT BLOCKS */
+
+    .research-block {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      margin: 70px 0;
+    }
+
+    .research-block.reverse {
+      grid-template-columns: 1fr 1.1fr;
+    }
+
+    .research-text h4 {
+      font-size: 27px;
+      margin: 0 0 16px;
+    }
+
+    .research-text p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #444;
+    }
+
+
+    /* TAGS */
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .tag {
+      border: 1px solid #d9d9d9;
+      border-radius: 20px;
+      padding: 8px 14px;
+      font-size: 14px;
+      color: #444;
+      background: #fafafa;
+    }
+
+
+    /* IMAGE / VIDEO PLACEHOLDERS */
+
+    .media-placeholder {
+      min-height: 330px;
+      border: 1px dashed #bcbcbc;
+      border-radius: 12px;
+      background: #f7f7f7;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      color: #888;
+      padding: 30px;
+    }
+
+
+    /* STATUS / METRICS */
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 50px 0;
+    }
+
+    .metric {
+      border-top: 2px solid #1a1a1a;
+      padding-top: 18px;
+    }
+
+    .metric-number {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .metric-label {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+
+    /* SUBSECTION */
+
+    .subsection {
+      margin-top: 70px;
+      padding-top: 35px;
+      border-top: 1px solid #dddddd;
+    }
+
+    .subsection h4 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .subsection p {
+      max-width: 820px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #444;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      padding: 45px 8%;
+      border-top: 1px solid #eeeeee;
+      color: #777;
+      font-size: 14px;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 14px;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+        margin-right: 18px;
+      }
+
+      .page-header h1 {
+        font-size: 42px;
+      }
+
+      .research-nav-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .research-block,
+      .research-block.reverse {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- TOP NAVIGATION -->
+
+  <nav>
+
+    <div class="nav-name">
+      Shasha Shankaramani
+    </div>
+
+    <div class="nav-links">
+
+      <a href="index.html">Home</a>
+      <a href="experience.html">Experience</a>
+      <a href="research.html">Research</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+      <a href="#">Resume</a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- PAGE INTRO -->
+
+  <section class="page-header">
+
+    <h1>Research</h1>
+
+    <p>
+      My research spans biomedical device design, computer vision,
+      and mechanical systems, with a focus on developing technologies
+      that interact with complex physical and biological environments.
+    </p>
+
+  </section>
+
+
+
+  <!-- RESEARCH NAVIGATION -->
+
+  <section class="research-nav">
+
+    <div class="research-nav-inner">
+
+
+      <a href="#enteroscopy">
+
+        <div class="research-nav-card">
+
+          <div class="research-nav-icon">
+            🩺
+          </div>
+
+          <div class="research-nav-title">
+            Deep Enteroscopy
+          </div>
+
+          <div class="research-nav-subtitle">
+            Medical Device Design<br>
+            Mechanism Development
+          </div>
+
+        </div>
+
+      </a>
+
+
+
+      <a href="#sports-lab">
+
+        <div class="research-nav-card">
+
+          <div class="research-nav-icon">
+            🐎
+          </div>
+
+          <div class="research-nav-title">
+            MIT Sports Lab
+          </div>
+
+          <div class="research-nav-subtitle">
+            Computer Vision<br>
+            Equine Health
+          </div>
+
+        </div>
+
+      </a>
+
+
+
+      <a href="#meta-lab">
+
+        <div class="research-nav-card">
+
+          <div class="research-nav-icon">
+            🔬
+          </div>
+
+          <div class="research-nav-title">
+            META Lab
+          </div>
+
+          <div class="research-nav-subtitle">
+            Thin-Film Transfer<br>
+            Mechanical Design
+          </div>
+
+        </div>
+
+      </a>
+
+
+    </div>
+
+  </section>
+
+
+
+
+  <!-- DEEP ENTEROSCOPY -->
+
+  <section class="research-section" id="enteroscopy">
+
+    <div class="research-inner">
+
+
+      <div class="research-header">
+
+        <div class="research-title">
+
+          <h2>
+            Deep Enteroscopy Medical Device Design
+          </h2>
+
+          <h3>
+            Undergraduate Research · MIT
+          </h3>
+
+        </div>
+
+
+        <div class="research-date">
+          2026 – Present
+        </div>
+
+      </div>
+
+
+      <p class="overview">
+
+        Developing a deployable mechanical mechanism for deep enteroscopy
+        with the goal of improving procedural safety and enabling rapid
+        withdrawal in the event of complications while preserving the
+        benefits of motorized spiral enteroscopy.
+
+      </p>
+
+
+
+      <!-- CLINICAL MOTIVATION -->
+
+      <div class="research-block">
+
+        <div class="media-placeholder">
+
+          Add clinical diagram, enteroscopy schematic,
+          or mechanism context image here
+
+        </div>
+
+
+        <div class="research-text">
+
+          <h4>
+            Clinical Motivation
+          </h4>
+
+          <p>
+
+            Deep enteroscopy enables access to regions of the small intestine
+            that are difficult to reach using conventional endoscopic methods.
+            My work focuses on developing a mechanical fail-safe concept that
+            could allow controlled withdrawal of the device in the event of
+            procedural complications.
+
+          </p>
+
+
+          <div class="tags">
+
+            <span class="tag">Biomedical Devices</span>
+            <span class="tag">Deep Enteroscopy</span>
+            <span class="tag">Mechanical Safety</span>
+            <span class="tag">Assistive Technology</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- MECHANISM DESIGN -->
+
+      <div class="research-block reverse">
+
+        <div class="research-text">
+
+          <h4>
+            Mechanism Design
+          </h4>
+
+          <p>
+
+            Designed a deployable tubular mechanism using patterned slit
+            geometries that transform under compression. The concept uses
+            spiral and vertical slit patterns to create controlled radial
+            deployment while maintaining a compact undeployed form.
+
+          </p>
+
+
+          <div class="tags">
+
+            <span class="tag">Mechanism Design</span>
+            <span class="tag">Compliant Structures</span>
+            <span class="tag">CAD</span>
+            <span class="tag">Design Iteration</span>
+
+          </div>
+
+        </div>
+
+
+        <div class="media-placeholder">
+
+          Add mechanism rendering, CAD image,
+          or deployed / undeployed figure here
+
+        </div>
+
+      </div>
+
+
+
+      <!-- PROTOTYPING -->
+
+      <div class="research-block">
+
+        <div class="media-placeholder">
+
+          Add prototype photo, tubing sample,
+          fabrication image, or test setup here
+
+        </div>
+
+
+        <div class="research-text">
+
+          <h4>
+            Prototyping & Material Evaluation
+          </h4>
+
+          <p>
+
+            Evaluating flexible PVC tubing materials and wall thicknesses
+            to understand how geometry and material properties affect
+            deformation, deployment behavior, and mechanical response.
+
+          </p>
+
+
+          <div class="tags">
+
+            <span class="tag">PVC</span>
+            <span class="tag">Fabrication</span>
+            <span class="tag">Material Testing</span>
+            <span class="tag">Rapid Prototyping</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- EXPERIMENTS -->
+
+      <div class="research-block reverse">
+
+        <div class="research-text">
+
+          <h4>
+            Experimental Characterization
+          </h4>
+
+          <p>
+
+            Building an experimental framework to compare prototype designs
+            across materials and wall thicknesses and quantify their deployment
+            and mechanical behavior.
+
+          </p>
+
+
+          <div class="tags">
+
+            <span class="tag">Experimental Design</span>
+            <span class="tag">Mechanical Testing</span>
+            <span class="tag">Data Analysis</span>
+
+          </div>
+
+        </div>
+
+
+        <div class="media-placeholder">
+
+          Add force data, experimental plot,
+          testing video, or results figure here
+
+        </div>
+
+      </div>
+
+
+
+      <!-- STATUS -->
+
+      <div class="metrics">
+
+        <div class="metric">
+
+          <div class="metric-number">
+            Ongoing
+          </div>
+
+          <div class="metric-label">
+            Research and prototype development
+          </div>
+
+        </div>
+
+
+        <div class="metric">
+
+          <div class="metric-number">
+            CAD + Test
+          </div>
+
+          <div class="metric-label">
+            Iterative design and experimental validation
+          </div>
+
+        </div>
+
+
+        <div class="metric">
+
+          <div class="metric-number">
+            Biomedical
+          </div>
+
+          <div class="metric-label">
+            Medical device safety and mechanism design
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+  <!-- MIT SPORTS LAB -->
+
+  <section class="research-section" id="sports-lab">
+
+    <div class="research-inner">
+
+
+      <div class="research-header">
+
+        <div class="research-title">
+
+          <h2>
+            MIT Sports Lab
+          </h2>
+
+          <h3>
+            Undergraduate Research Fellow
+          </h3>
+
+        </div>
+
+
+        <div class="research-date">
+
+          January 2026 – May 2026
+          <br>
+          Cambridge, Massachusetts
+
+        </div>
+
+      </div>
+
+
+      <p class="overview">
+
+        Developed computer vision and machine-learning tools for early
+        identification of equine health abnormalities from video data.
+
+      </p>
+
+
+
+      <!-- OPTICAL FLOW -->
+
+      <div class="research-block">
+
+        <div class="media-placeholder">
+
+          Add optical-flow visualization,
+          frame comparison, or pipeline image here
+
+        </div>
+
+
+        <div class="research-text">
+
+          <h4>
+            Optical Flow for Equine Health
+          </h4>
+
+          <p>
+
+            Developed an optical flow-based computer vision pipeline
+            to analyze horse movement from video footage and identify
+            early indicators of disease.
+
+          </p>
+
+
+          <div class="tags">
+
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Optical Flow</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Video Analysis</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- VLM -->
+
+      <div class="research-block reverse">
+
+        <div class="research-text">
+
+          <h4>
+            Vision-Language Models & Data Pipelines
+          </h4>
+
+          <p>
+
+            Used vision-language models to support video analysis and
+            worked with large-scale visual datasets in Microsoft Azure.
+
+          </p>
+
+
+          <div class="tags">
+
+            <span class="tag">VLMs</span>
+            <span class="tag">Azure</span>
+            <span class="tag">Visual Data</span>
+            <span class="tag">Data Processing</span>
+
+          </div>
+
+        </div>
+
+
+        <div class="media-placeholder">
+
+          Add VLM pipeline diagram,
+          dataset visualization, or sample output here
+
+        </div>
+
+      </div>
+
+
+
+      <!-- WEB APP -->
+
+      <div class="research-block">
+
+        <div class="media-placeholder">
+
+          Add web application screenshot
+          or system architecture graphic here
+
+        </div>
+
+
+        <div class="research-text">
+
+          <h4>
+            Client-Facing Web Application
+          </h4>
+
+          <p>
+
+            Built and deployed an AWS-based web application to surface
+            model outputs and deliver horse health alerts in a format
+            usable by the project client.
+
+          </p>
+
+
+          <div class="tags">
+
+            <span class="tag">AWS</span>
+            <span class="tag">Web Development</span>
+            <span class="tag">Model Deployment</span>
+            <span class="tag">Health Monitoring</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+  <!-- META LAB -->
+
+  <section class="research-section" id="meta-lab">
+
+    <div class="research-inner">
+
+
+      <div class="research-header">
+
+        <div class="research-title">
+
+          <h2>
+            Multifunctional Metamaterials Lab
+          </h2>
+
+          <h3>
+            Undergraduate Research Fellow
+          </h3>
+
+        </div>
+
+
+        <div class="research-date">
+
+          September 2025 – January 2026
+          <br>
+          Cambridge, Massachusetts
+
+        </div>
+
+      </div>
+
+
+      <p class="overview">
+
+        Researched and developed a thin-film transfer device for
+        semiconductor manufacturing applications, combining mechanical
+        design, fabrication, and small-scale prototyping.
+
+      </p>
+
+
+
+      <!-- DESIGN -->
+
+      <div class="research-block">
+
+        <div class="media-placeholder">
+
+          Add Fusion 360 rendering,
+          device assembly, or CAD image here
+
+        </div>
+
+
+        <div class="research-text">
+
+          <h4>
+            Mechanical Design
+          </h4>
+
+          <p>
+
+            Designed components and assemblies in Fusion 360, iterating
+            geometry for manufacturability, mechanical integration,
+            and compatibility with the transfer process.
+
+          </p>
+
+
+          <div class="tags">
+
+            <span class="tag">Fusion 360</span>
+            <span class="tag">CAD</span>
+            <span class="tag">Mechanical Design</span>
+            <span class="tag">Design for Manufacturing</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- PROTOTYPING -->
+
+      <div class="research-block reverse">
+
+        <div class="research-text">
+
+          <h4>
+            Fabrication & Prototyping
+          </h4>
+
+          <p>
+
+            Fabricated and evaluated prototype components using SLA
+            printing and MIT.nano nanofabrication techniques, comparing
+            multiple approaches for small-scale manufacturing.
+
+          </p>
+
+
+          <div class="tags">
+
+            <span class="tag">SLA Printing</span>
+            <span class="tag">MIT.nano</span>
+            <span class="tag">Prototyping</span>
+            <span class="tag">Nanofabrication</span>
+
+          </div>
+
+        </div>
+
+
+        <div class="media-placeholder">
+
+          Add prototype photo,
+          SLA print, or fabrication image here
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Shasha Shankaramani
+  </footer>
+
+
+</body>
+
+</html>
