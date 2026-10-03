@@ -17,8 +17,22 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background-color: #ffffff;
-      color: #1a1a1a;
+      color: #172033;
     }
+
+
+    /* COLOR PALETTE
+
+      Deep Navy:       #172033
+      Steel Blue:      #315B7D
+      Sage Green:      #9FB7A8
+      Muted Coral:     #D9826A
+      Warm Cream:      #F7F1E8
+      Pale Blue Gray:  #EEF3F7
+      Body Text:       #46505A
+      Divider:         #B9C6D1
+
+    */
 
 
     /* TOP NAVIGATION */
@@ -28,27 +42,70 @@
       justify-content: space-between;
       align-items: center;
       padding: 24px 8%;
-      border-bottom: 1px solid #e6e6e6;
+      border-bottom: 2px solid #B9C6D1;
       position: sticky;
       top: 0;
-      background: white;
+      background: #ffffff;
       z-index: 100;
     }
 
     .nav-name {
       font-size: 20px;
       font-weight: 700;
+      color: #172033;
     }
 
     .nav-links a {
+      position: relative;
       margin-left: 28px;
       text-decoration: none;
-      color: #1a1a1a;
+      color: #46505A;
       font-size: 15px;
+      padding-bottom: 7px;
+      transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: #777;
+      color: #172033;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      border-radius: 3px;
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-home::after,
+    .nav-experience::after,
+    .nav-about::after,
+    .nav-resume::after {
+      background-color: #315B7D;
+    }
+
+    .nav-research::after {
+      background-color: #9FB7A8;
+    }
+
+    .nav-involvement::after {
+      background-color: #D9826A;
+    }
+
+    .nav-resume {
+      color: #172033 !important;
+      font-weight: 600;
+    }
+
+    .nav-resume::after {
+      width: 100% !important;
     }
 
 
@@ -63,12 +120,13 @@
       font-size: 56px;
       margin: 0 0 20px;
       letter-spacing: -1px;
+      color: #172033;
     }
 
     .page-header p {
       font-size: 19px;
       line-height: 1.7;
-      color: #555;
+      color: #46505A;
       max-width: 750px;
     }
 
@@ -79,52 +137,69 @@
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      padding: 0 8% 45px;
+      padding: 0 8% 50px;
     }
 
     .button {
       display: inline-block;
-      padding: 12px 22px;
-      border-radius: 8px;
+      padding: 13px 23px;
+      border-radius: 9px;
       text-decoration: none;
       font-size: 15px;
       font-weight: 600;
-      transition: 0.2s;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
     }
 
     .primary-button {
-      background-color: #1a1a1a;
-      color: white;
+      background-color: #315B7D;
+      color: #ffffff;
+      border: 1px solid #315B7D;
+      box-shadow: 0 6px 16px rgba(49, 91, 125, 0.15);
     }
 
     .primary-button:hover {
-      background-color: #444;
+      background-color: #274B68;
+      border-color: #274B68;
+      box-shadow: 0 8px 20px rgba(49, 91, 125, 0.22);
     }
 
     .secondary-button {
-      border: 1px solid #cccccc;
-      color: #1a1a1a;
-      background-color: white;
+      border: 1px solid #B9C6D1;
+      color: #315B7D;
+      background-color: #ffffff;
     }
 
     .secondary-button:hover {
-      background-color: #f5f5f5;
+      background-color: #EEF3F7;
+      border-color: #9EB1C0;
     }
 
 
-    /* PDF VIEWER */
+    /* PDF VIEWER SECTION */
 
     .resume-viewer-section {
-      padding: 0 8% 90px;
+      padding: 60px 8% 90px;
+      background-color: #EEF3F7;
+      border-top: 3px solid #315B7D;
     }
 
     .resume-viewer {
       max-width: 1100px;
       margin: 0 auto;
-      border: 1px solid #dddddd;
-      border-radius: 12px;
+      border: 1px solid #C9D4DD;
+      border-radius: 14px;
       overflow: hidden;
-      background: #f5f5f5;
+      background: #ffffff;
+      box-shadow: 0 12px 28px rgba(23, 32, 51, 0.08);
     }
 
     .resume-viewer iframe {
@@ -132,6 +207,7 @@
       height: 1100px;
       border: none;
       display: block;
+      background-color: #ffffff;
     }
 
 
@@ -139,8 +215,9 @@
 
     footer {
       padding: 45px 8%;
-      border-top: 1px solid #eeeeee;
-      color: #777;
+      border-top: 2px solid #D8CBB9;
+      background-color: #F7F1E8;
+      color: #66717C;
       font-size: 14px;
     }
 
@@ -167,6 +244,11 @@
         font-size: 42px;
       }
 
+      .resume-viewer-section {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
       .resume-viewer iframe {
         height: 750px;
       }
@@ -190,12 +272,12 @@
     </div>
 
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="experience.html">Experience</a>
-      <a href="research.html">Research</a>
-      <a href="involvement.html">Involvement</a>
-      <a href="about.html">About</a>
-      <a href="resume.html">Resume</a>
+      <a href="index.html" class="nav-home">Home</a>
+      <a href="experience.html" class="nav-experience">Experience</a>
+      <a href="research.html" class="nav-research">Research</a>
+      <a href="involvement.html" class="nav-involvement">Involvement</a>
+      <a href="about.html" class="nav-about">About</a>
+      <a href="resume.html" class="nav-resume">Resume</a>
     </div>
 
   </nav>
@@ -206,7 +288,9 @@
 
   <section class="page-header">
 
-    <h1>Resume</h1>
+    <h1>
+      Resume
+    </h1>
 
     <p>
       A summary of my education, technical experience, research,
