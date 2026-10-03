@@ -25,9 +25,12 @@
 
       Deep Navy:       #172033
       Steel Blue:      #315B7D
-      Soft Blue Gray:  #F3F6F8
-      Divider Gray:    #C8D3DC
+      Sage Green:      #9FB7A8
+      Muted Coral:     #D9826A
+      Warm Cream:      #F7F1E8
+      Pale Blue Gray:  #EEF3F7
       Body Text:       #46505A
+      Divider:         #B9C6D1
 
     */
 
@@ -39,7 +42,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 24px 8%;
-      border-bottom: 2px solid #C8D3DC;
+      border-bottom: 2px solid #B9C6D1;
       background-color: #ffffff;
     }
 
@@ -105,6 +108,18 @@
     .hero-image {
       display: flex;
       justify-content: center;
+      position: relative;
+    }
+
+    .hero-image::before {
+      content: "";
+      position: absolute;
+      width: 88%;
+      height: 88%;
+      background-color: #F7F1E8;
+      border-radius: 24px;
+      transform: translate(24px, 24px);
+      z-index: 0;
     }
 
     .hero-image img {
@@ -113,24 +128,26 @@
       aspect-ratio: 4 / 5;
       object-fit: cover;
       object-position: center top;
-      border-radius: 14px;
-      box-shadow: 0 10px 28px rgba(23, 32, 51, 0.10);
+      border-radius: 16px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 14px 30px rgba(23, 32, 51, 0.12);
     }
 
 
     /* EXPLORE SECTION */
 
     .section {
-      padding: 80px 8%;
-      background-color: #F3F6F8;
-      border-top: 2px solid #C8D3DC;
-      border-bottom: 2px solid #C8D3DC;
+      padding: 85px 8%;
+      background-color: #EEF3F7;
+      border-top: 3px solid #315B7D;
+      border-bottom: 1px solid #B9C6D1;
     }
 
     .section h2 {
-      font-size: 36px;
+      font-size: 38px;
       margin-top: 0;
-      margin-bottom: 40px;
+      margin-bottom: 42px;
       color: #172033;
     }
 
@@ -148,15 +165,19 @@
     .card {
       position: relative;
       background-color: #ffffff;
-      border: 1px solid #D4DCE3;
-      border-radius: 12px;
-      padding: 32px 28px 28px;
-      min-height: 180px;
+      border-radius: 14px;
+      padding: 34px 28px 30px;
+      min-height: 190px;
+      border: 1px solid #D3DDE5;
       transition:
         transform 0.2s ease,
-        box-shadow 0.2s ease,
-        border-color 0.2s ease;
+        box-shadow 0.2s ease;
       overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 28px rgba(23, 32, 51, 0.11);
     }
 
     .card::before {
@@ -165,14 +186,19 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 4px;
+      height: 6px;
+    }
+
+    .experience-card::before {
       background-color: #315B7D;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(23, 32, 51, 0.10);
-      border-color: #AEBFCC;
+    .research-card::before {
+      background-color: #9FB7A8;
+    }
+
+    .involvement-card::before {
+      background-color: #D9826A;
     }
 
     .card h3 {
@@ -180,6 +206,18 @@
       margin-bottom: 14px;
       font-size: 22px;
       color: #172033;
+    }
+
+    .experience-card h3 {
+      color: #315B7D;
+    }
+
+    .research-card h3 {
+      color: #6F8F7A;
+    }
+
+    .involvement-card h3 {
+      color: #B8614D;
     }
 
     .card p {
@@ -193,8 +231,8 @@
 
     footer {
       padding: 40px 8%;
-      background-color: #ffffff;
-      border-top: 1px solid #D7DEE4;
+      background-color: #F7F1E8;
+      border-top: 2px solid #D8CBB9;
       color: #66717C;
       font-size: 14px;
     }
@@ -233,6 +271,12 @@
 
       .hero-image img {
         max-width: 320px;
+      }
+
+      .hero-image::before {
+        width: 290px;
+        height: 370px;
+        transform: translate(18px, 18px);
       }
 
       .cards {
@@ -320,7 +364,7 @@
 
       <a href="experience.html" class="card-link">
 
-        <div class="card">
+        <div class="card experience-card">
 
           <h3>
             Experience
@@ -338,7 +382,7 @@
 
       <a href="research.html" class="card-link">
 
-        <div class="card">
+        <div class="card research-card">
 
           <h3>
             Research
@@ -356,7 +400,7 @@
 
       <a href="involvement.html" class="card-link">
 
-        <div class="card">
+        <div class="card involvement-card">
 
           <h3>
             Involvement
