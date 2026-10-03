@@ -1,1 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About | Shasha Shankaramani</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+    }
+
+
+    /* TOP NAVIGATION */
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 8%;
+      border-bottom: 1px solid #e6e6e6;
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 100;
+    }
+
+    .nav-name {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      margin-left: 28px;
+      text-decoration: none;
+      color: #1a1a1a;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #777;
+    }
+
+
+    /* ABOUT HERO */
+
+    .about-hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 70px;
+      align-items: center;
+      padding: 90px 8%;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .about-text h1 {
+      font-size: 56px;
+      margin: 0 0 25px;
+      letter-spacing: -1px;
+    }
+
+    .about-text p {
+      font-size: 19px;
+      line-height: 1.75;
+      color: #444;
+      max-width: 760px;
+    }
+
+    .about-photo {
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-photo img {
+      width: 100%;
+      max-width: 390px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+
+
+    /* INTERESTS SECTION */
+
+    .interests-section {
+      padding: 85px 8%;
+      border-top: 1px solid #eeeeee;
+    }
+
+    .interests-inner {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    .interests-section h2 {
+      font-size: 38px;
+      margin: 0 0 15px;
+    }
+
+    .interests-intro {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #555;
+      max-width: 760px;
+      margin-bottom: 50px;
+    }
+
+    .interest-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .interest-card {
+      border: 1px solid #dddddd;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #ffffff;
+      transition: 0.2s;
+    }
+
+    .interest-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .interest-image {
+      height: 240px;
+      background: #f5f5f5;
+      border-bottom: 1px solid #e5e5e5;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #888;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .interest-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .interest-content {
+      padding: 24px;
+    }
+
+    .interest-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .interest-content h3 {
+      font-size: 22px;
+      margin: 0 0 12px;
+    }
+
+    .interest-content p {
+      font-size: 16px;
+      line-height: 1.65;
+      color: #555;
+      margin: 0;
+    }
+
+
+    /* VALUES / PERSONAL SECTION */
+
+    .personal-section {
+      padding: 85px 8%;
+      border-top: 1px solid #eeeeee;
+    }
+
+    .personal-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .personal-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .personal-section p {
+      font-size: 18px;
+      line-height: 1.75;
+      color: #444;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      padding: 45px 8%;
+      border-top: 1px solid #eeeeee;
+      color: #777;
+      font-size: 14px;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 14px;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+        margin-right: 18px;
+      }
+
+      .about-hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about-text h1 {
+        font-size: 42px;
+      }
+
+      .about-photo {
+        justify-content: flex-start;
+      }
+
+      .about-photo img {
+        max-width: 320px;
+      }
+
+      .interest-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- TOP NAVIGATION -->
+
+  <nav>
+
+    <div class="nav-name">
+      Shasha Shankaramani
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="experience.html">Experience</a>
+      <a href="research.html">Research</a>
+      <a href="involvement.html">Involvement</a>
+      <a href="about.html">About</a>
+      <a href="#">Resume</a>
+    </div>
+
+  </nav>
+
+
+
+  <!-- ABOUT HERO -->
+
+  <section class="about-hero">
+
+    <div class="about-text">
+
+      <h1>About Me</h1>
+
+      <p>
+        I am a junior at MIT studying Mechanical Engineering with a
+        concentration in Robotics. I am especially interested in designing
+        systems that bridge mechanical engineering, robotics, and human needs.
+        My work has included robotic manipulation, medical devices, aerospace
+        engineering, and hands-on mechanical design, with a particular interest
+        in assistive technology.
+      </p>
+
+      <p>
+        I enjoy working on problems that combine analytical thinking with
+        physical design, especially when the final system has a clear impact
+        on how people interact with technology and the world around them.
+      </p>
+
+    </div>
+
+
+    <div class="about-photo">
+
+      <img
+        src="headshot.jpg"
+        alt="Portrait of Shasha Shankaramani"
+      >
+
+    </div>
+
+  </section>
+
+
+
+  <!-- OUTSIDE ENGINEERING -->
+
+  <section class="interests-section">
+
+    <div class="interests-inner">
+
+      <h2>
+        Outside of Engineering
+      </h2>
+
+      <p class="interests-intro">
+        Outside of academics and research, I enjoy activities that let me
+        explore new places, stay creative, and spend time doing things that
+        are completely different from engineering.
+      </p>
+
+
+      <div class="interest-grid">
+
+
+        <!-- HORSEBACK RIDING -->
+
+        <div class="interest-card">
+
+          <div class="interest-image">
+            Add horseback riding photo here
+          </div>
+
+          <div class="interest-content">
+
+            <div class="interest-icon">
+              🐎
+            </div>
+
+            <h3>
+              Horseback Riding
+            </h3>
+
+            <p>
+              I grew up horseback riding before coming to MIT and have always
+              enjoyed spending time around horses. Riding taught me patience,
+              awareness, and how much communication can happen without words.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- TRAVEL & FOOD -->
+
+        <div class="interest-card">
+
+          <div class="interest-image">
+            Add travel or food photo here
+          </div>
+
+          <div class="interest-content">
+
+            <div class="interest-icon">
+              ✈️
+            </div>
+
+            <h3>
+              Travel & Trying New Foods
+            </h3>
+
+            <p>
+              I love traveling, exploring new cities and cultures, and trying
+              local foods wherever I go. Some of my favorite parts of traveling
+              are the small restaurants, markets, and unexpected places you find
+              along the way.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- CROCHET -->
+
+        <div class="interest-card">
+
+          <div class="interest-image">
+            Add crochet project photo here
+          </div>
+
+          <div class="interest-content">
+
+            <div class="interest-icon">
+              🧶
+            </div>
+
+            <h3>
+              Crochet
+            </h3>
+
+            <p>
+              Crochet is one of my favorite creative outlets. I enjoy the process
+              of starting with a simple idea and gradually turning it into
+              something tangible and handmade.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- PERSONAL NOTE -->
+
+  <section class="personal-section">
+
+    <div class="personal-inner">
+
+      <h2>
+        A Little More About Me
+      </h2>
+
+      <p>
+        Whether I am working on a mechanical prototype, helping someone through
+        a difficult course problem, traveling somewhere new, or learning a new
+        crochet pattern, I enjoy experiences that involve curiosity, patience,
+        and making things better through iteration.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Shasha Shankaramani
+  </footer>
+
+
+</body>
+
+</html>
