@@ -1,1 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Resume | Shasha Shankaramani</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+    }
+
+
+    /* TOP NAVIGATION */
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 8%;
+      border-bottom: 1px solid #e6e6e6;
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 100;
+    }
+
+    .nav-name {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      margin-left: 28px;
+      text-decoration: none;
+      color: #1a1a1a;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #777;
+    }
+
+
+    /* PAGE HEADER */
+
+    .page-header {
+      padding: 90px 8% 45px;
+      max-width: 1100px;
+    }
+
+    .page-header h1 {
+      font-size: 56px;
+      margin: 0 0 20px;
+      letter-spacing: -1px;
+    }
+
+    .page-header p {
+      font-size: 19px;
+      line-height: 1.7;
+      color: #555;
+      max-width: 750px;
+    }
+
+
+    /* BUTTONS */
+
+    .resume-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding: 0 8% 45px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .primary-button {
+      background-color: #1a1a1a;
+      color: white;
+    }
+
+    .primary-button:hover {
+      background-color: #444;
+    }
+
+    .secondary-button {
+      border: 1px solid #cccccc;
+      color: #1a1a1a;
+      background-color: white;
+    }
+
+    .secondary-button:hover {
+      background-color: #f5f5f5;
+    }
+
+
+    /* PDF VIEWER */
+
+    .resume-viewer-section {
+      padding: 0 8% 90px;
+    }
+
+    .resume-viewer {
+      max-width: 1100px;
+      margin: 0 auto;
+      border: 1px solid #dddddd;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f5f5f5;
+    }
+
+    .resume-viewer iframe {
+      width: 100%;
+      height: 1100px;
+      border: none;
+      display: block;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      padding: 45px 8%;
+      border-top: 1px solid #eeeeee;
+      color: #777;
+      font-size: 14px;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 14px;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+        margin-right: 18px;
+      }
+
+      .page-header h1 {
+        font-size: 42px;
+      }
+
+      .resume-viewer iframe {
+        height: 750px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- TOP NAVIGATION -->
+
+  <nav>
+
+    <div class="nav-name">
+      Shasha Shankaramani
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="experience.html">Experience</a>
+      <a href="research.html">Research</a>
+      <a href="involvement.html">Involvement</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+    </div>
+
+  </nav>
+
+
+
+  <!-- PAGE HEADER -->
+
+  <section class="page-header">
+
+    <h1>Resume</h1>
+
+    <p>
+      A summary of my education, technical experience, research,
+      leadership, and engineering skills.
+    </p>
+
+  </section>
+
+
+
+  <!-- RESUME BUTTONS -->
+
+  <section class="resume-actions">
+
+    <a
+      href="resume.pdf"
+      target="_blank"
+      class="button primary-button">
+      Open Resume
+    </a>
+
+    <a
+      href="resume.pdf"
+      download
+      class="button secondary-button">
+      Download PDF
+    </a>
+
+  </section>
+
+
+
+  <!-- PDF VIEWER -->
+
+  <section class="resume-viewer-section">
+
+    <div class="resume-viewer">
+
+      <iframe
+        src="resume.pdf"
+        title="Shasha Shankaramani Resume">
+      </iframe>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Shasha Shankaramani
+  </footer>
+
+
+</body>
+
+</html>
