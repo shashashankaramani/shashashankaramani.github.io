@@ -239,6 +239,24 @@
       color: #888;
       padding: 30px;
     }
+    .media-figure {
+      width: 100%;
+    }
+    
+    .media-figure img {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+    
+    .image-caption {
+      margin: 9px 2px 0;
+      font-size: 13px;
+      color: #777;
+      line-height: 1.4;
+    }
 
 
     /* METRICS */
@@ -530,11 +548,17 @@
 
       <div class="project-block">
 
-        <div class="media-placeholder">
+        <div class="media-figure">
 
-          Add NPSS plot, engine diagram,
-          simulation screenshot, or related image here
-
+          <img
+            src="F110-129E.jpeg"
+            alt="GE Aerospace F110 turbofan engine"
+          >
+        
+          <p class="image-caption">
+            GE Aerospace F110 turbofan engine. Image: GE Aerospace.
+          </p>
+        
         </div>
 
 
