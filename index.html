@@ -17,8 +17,19 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background-color: #ffffff;
-      color: #1a1a1a;
+      color: #172033;
     }
+
+
+    /* COLOR PALETTE
+
+      Deep Navy:       #172033
+      Steel Blue:      #315B7D
+      Soft Blue Gray:  #F3F6F8
+      Divider Gray:    #C8D3DC
+      Body Text:       #46505A
+
+    */
 
 
     /* NAVIGATION */
@@ -28,23 +39,26 @@
       justify-content: space-between;
       align-items: center;
       padding: 24px 8%;
-      border-bottom: 1px solid #e6e6e6;
+      border-bottom: 2px solid #C8D3DC;
+      background-color: #ffffff;
     }
 
     .nav-name {
       font-size: 20px;
       font-weight: 700;
+      color: #172033;
     }
 
     .nav-links a {
       margin-left: 28px;
       text-decoration: none;
-      color: #1a1a1a;
+      color: #46505A;
       font-size: 15px;
+      transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: #777;
+      color: #315B7D;
     }
 
 
@@ -57,6 +71,7 @@
       gap: 70px;
       align-items: center;
       padding: 70px 8%;
+      background-color: #ffffff;
     }
 
     .hero-content {
@@ -67,12 +82,13 @@
       font-size: 64px;
       margin: 0 0 18px;
       letter-spacing: -2px;
+      color: #172033;
     }
 
     .hero h2 {
       font-size: 24px;
       font-weight: 400;
-      color: #555;
+      color: #315B7D;
       margin: 0 0 30px;
     }
 
@@ -80,7 +96,7 @@
       font-size: 19px;
       line-height: 1.75;
       max-width: 760px;
-      color: #444;
+      color: #46505A;
     }
 
 
@@ -98,19 +114,24 @@
       object-fit: cover;
       object-position: center top;
       border-radius: 14px;
+      box-shadow: 0 10px 28px rgba(23, 32, 51, 0.10);
     }
 
 
-    /* SELECTED WORK */
+    /* EXPLORE SECTION */
 
     .section {
       padding: 80px 8%;
-      border-top: 1px solid #eeeeee;
+      background-color: #F3F6F8;
+      border-top: 2px solid #C8D3DC;
+      border-bottom: 2px solid #C8D3DC;
     }
 
     .section h2 {
       font-size: 36px;
+      margin-top: 0;
       margin-bottom: 40px;
+      color: #172033;
     }
 
     .cards {
@@ -125,26 +146,46 @@
     }
 
     .card {
-      border: 1px solid #dddddd;
-      border-radius: 10px;
-      padding: 28px;
+      position: relative;
+      background-color: #ffffff;
+      border: 1px solid #D4DCE3;
+      border-radius: 12px;
+      padding: 32px 28px 28px;
       min-height: 180px;
-      transition: 0.2s;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #315B7D;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(23, 32, 51, 0.10);
+      border-color: #AEBFCC;
     }
 
     .card h3 {
       margin-top: 0;
+      margin-bottom: 14px;
       font-size: 22px;
+      color: #172033;
     }
 
     .card p {
       line-height: 1.6;
-      color: #555;
+      color: #46505A;
+      margin-bottom: 0;
     }
 
 
@@ -152,8 +193,9 @@
 
     footer {
       padding: 40px 8%;
-      border-top: 1px solid #eeeeee;
-      color: #777;
+      background-color: #ffffff;
+      border-top: 1px solid #D7DEE4;
+      color: #66717C;
       font-size: 14px;
     }
 
@@ -243,9 +285,9 @@
       </h2>
 
       <p>
-        I am a junior at MIT studying Course 2A-6, Mechanical Engineering with a concentration in Robotics. 
-        I work at the boundary between hardware and software, using AI, machine learning, and data-driven tools 
-        to tackle physical engineering problems. My interests include robotic manipulation, biomechatronics, 
+        I am a junior at MIT studying Course 2A-6, Mechanical Engineering with a concentration in Robotics.
+        I work at the boundary between hardware and software, using AI, machine learning, and data-driven tools
+        to tackle physical engineering problems. My interests include robotic manipulation, biomechatronics,
         aerospace engineering, and assistive technology.
       </p>
 
@@ -265,7 +307,7 @@
 
 
 
-  <!-- SELECTED WORK -->
+  <!-- EXPLORE -->
 
   <section class="section">
 
@@ -285,7 +327,8 @@
           </h3>
 
           <p>
-            Engineering internships and technical teams across aerospace, performance, and product development.
+            Engineering internships and technical teams across aerospace,
+            performance, and product development.
           </p>
 
         </div>
